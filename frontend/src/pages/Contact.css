@@ -9,6 +9,13 @@
   color:black;
 }
 
+.contact-message {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #666;
+}
+
+
 @media screen and (min-width: 600px) {
   .auth-form-container {
     padding: 5rem;

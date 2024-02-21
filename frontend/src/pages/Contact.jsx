@@ -56,7 +56,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h4>CONTACTA<br></br>con nuestros expertos en clorofila</h4>
+        <h4>Si tienes dudas, ¡te echamos una mano!</h4>
         <InputField
           label="Nombre"
           type="text"
@@ -84,6 +84,7 @@ const ContactForm = () => {
         <TextAreaField label="Nota" id="note" value={note} onChange={setNote} />
         {errors.note && <p className="error-message">{errors.note}</p>}
         <button className="button-contact" type="submit">Enviar</button>
+        <p className="contact-message">Al contactar declaras haber leído nuestra política de privacidad.</p>
       </form>
     </div>
   );
