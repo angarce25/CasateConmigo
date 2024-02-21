@@ -3,6 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import SearchBar from './components/searchBar/searchBar'
+import Contact from '../src/pages/Contact'
+
+import './pages/Contact.css'
+import './pages/Home.css'
 
 function App() {
   return (
@@ -10,7 +14,7 @@ function App() {
       <Navbar />
       <SearchBar/>
       <Routes>
-        {/* Define tus rutas aquí */}
+       <Route path='/Contact' element={<Contact />} />
         {/* Por ejemplo: */}
         {/* <Route path="/" element={<Home />} /> */}
       </Routes>
