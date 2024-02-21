@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "nombre": "Piso céntrico renovado",
+      "descripcion": "Acogedor piso en el corazón de la ciudad. Totalmente renovado y amueblado. Ideal para parejas o profesionales.",
+      "importe": 800,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Barcelona, Cataluña"
+    },
+    {
+      "id": 2,
+      "nombre": "Piso luminoso con terraza",
+      "descripcion": "Espacioso piso con mucha luz natural y terraza privada. Perfecto para disfrutar del aire libre sin salir de casa.",
+      "importe": 1000,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Madrid, Comunidad de Madrid"
+    },
+    {
+      "id": 3,
+      "nombre": "Ático con vistas panorámicas",
+      "descripcion": "Increíble ático con vistas impresionantes de la ciudad. Totalmente amueblado y equipado con todas las comodidades.",
+      "importe": 1500,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Valencia, Comunidad Valenciana"
+    },
+    {
+      "id": 4,
+      "nombre": "Piso reformado en zona tranquila",
+      "descripcion": "Recién reformado y situado en una zona tranquila. Perfecto para aquellos que buscan paz y comodidad.",
+      "importe": 900,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Sevilla, Andalucía"
+    },
+    {
+      "id": 5,
+      "nombre": "Loft moderno cerca del metro",
+      "descripcion": "Loft contemporáneo con diseño moderno y excelente ubicación cerca del transporte público. Ideal para profesionales.",
+      "importe": 1100,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Bilbao, País Vasco"
+    },
+    {
+      "id": 6,
+      "nombre": "Piso con jardín privado",
+      "descripcion": "Amplio piso con jardín privado, perfecto para familias. Espacios luminosos y bien distribuidos.",
+      "importe": 1200,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Málaga, Andalucía"
+    },
+    {
+      "id": 7,
+      "nombre": "Dúplex con encanto en el casco antiguo",
+      "descripcion": "Encantador dúplex ubicado en el pintoresco casco antiguo. Con techos altos y detalles originales.",
+      "importe": 1300,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Granada, Andalucía"
+    },
+    {
+      "id": 8,
+      "nombre": "Piso con piscina comunitaria",
+      "descripcion": "Piso moderno con piscina comunitaria y zona de ocio. Perfecto para disfrutar del verano sin salir de casa.",
+      "importe": 1400,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Alicante, Comunidad Valenciana"
+    },
+    {
+      "id": 9,
+      "nombre": "Piso en urbanización con seguridad 24h",
+      "descripcion": "Piso situado en una urbanización con seguridad las 24 horas. Tranquilidad y confort garantizados.",
+      "importe": 1600,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Zaragoza, Aragón"
+    },
+    {
+      "id": 10,
+      "nombre": "Piso reformado con vistas al mar",
+      "descripcion": "Recién reformado con vistas espectaculares al mar. Ideal para aquellos que buscan un estilo de vida costero.",
+      "importe": 1800,
+      "foto": "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg",
+      "localizacion": "Cádiz, Andalucía"
+    }
+  ]
+  
