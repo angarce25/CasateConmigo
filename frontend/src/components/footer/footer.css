@@ -1,0 +1,40 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Coloca el borde izquierdo del footer en el centro de la página */
+    transform: translateX(-50%); /* Desplaza el footer hacia la izquierda en un 50% de su propio ancho, centrando así el footer */
+    width: 215vh;
+    height: 25vh;
+    background-color: #64DE95;
+}
+
+.p-footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-top: 1%;
+}
+
+.contact {
+    margin-right: 50px;
+}
+
+.about-us {
+    margin-right: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin-top: 20px; /* Añade un margen superior para separar los logos del texto */
+}
+
+.logo img {
+    margin: 0 10px; /* Añade un pequeño margen entre los logos */
+    width: 6vh;
+    height: 6vh;
+}
+
+

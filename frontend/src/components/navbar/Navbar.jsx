@@ -1,28 +1,50 @@
 import React from 'react';
 
 const Navbar = () => {
+  const navbarStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    border: '2px solid green',
+    padding: '10px 20px', // Ajusta el padding según tu preferencia
+  };
+
+  const logoContainerStyle = {
+    // Puedes ajustar el tamaño y margen del logo según sea necesario
+  };
+
+  const logoStyle = {
+    maxWidth: '100px', // Ajusta el tamaño máximo del logo
+  };
+
+  const favoritesContainerStyle = {
+    // Puedes ajustar el espacio y margen del botón de favoritos según sea necesario
+  };
+
+  const favoritesButtonStyle = {
+    backgroundColor: 'green',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px', // Ajusta el padding según tu preferencia
+    cursor: 'pointer',
+    borderRadius: '5px',
+  };
+
+  const favoritesButtonHoverStyle = {
+    backgroundColor: 'darkgreen', // Cambia el color al pasar el cursor sobre el botón
+  };
+
   return (
-    <nav className="bg-gray-800 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            {/* Logo */}
-            <img className="h-8 w-auto" src="/logo.svg" alt="Logo" />
-          </div>
-          <div className="hidden sm:block">
-            {/* Espacio para botones adicionales (si es necesario) */}
-          </div>
-          <div>
-            {/* Botón de sugerencias */}
-            <button className="bg-white text-gray-800 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-200">
-              Sugerencias
-            </button>
-          </div>
-        </div>
+    <nav style={navbarStyle}>
+      <div style={logoContainerStyle}>
+        <img src="/path/to/your/logo.png" alt="Logo" style={logoStyle} />
+      </div>
+      <div style={favoritesContainerStyle}>
+        <button style={favoritesButtonStyle}>Favoritos</button>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
-
