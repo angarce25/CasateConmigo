@@ -1,32 +1,62 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InputField from "../../src/Components/contactform/InputField";
-import TextAreaField from "../../src/Components/contactform/TextAreaField";
+import InputField from "../components/contactform/InputField"
+import TextAreaField from "../components/contactform/TextAreaField"
+
+import './Contact.css';
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+  const validateForm = () => {
+    let errors = {};
+
+    if (name.length < 6 || name.length > 16) {
+      errors.name = "El nombre debe tener entre 6 y 16 caracteres.";
+    }
+
+    if (!/^\d{10,11}$/.test(phone)) {
+      errors.phone = "El teléfono debe tener entre 10 y 11 dígitos numéricos.";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errors.email = "El correo electrónico ingresado no es válido.";
+    }
+
+    if (note.length < 50 || note.length > 250) {
+      errors.note = "La nota debe tener entre 50 y 250 caracteres.";
+    }
+
+    return errors;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Formulario enviado:", { name, phone, email, note });
+    const errors = validateForm();
+    if (Object.keys(errors).length === 0) {
+      console.log("Formulario enviado:", { name, phone, email, note });
 
-    // Simulación de un proceso asíncrono, por ejemplo, una solicitud HTTP
-    setTimeout(() => {
-      alert("Formulario de contacto enviado con éxito");
+      // Simulación de un proceso asíncrono, por ejemplo, una solicitud HTTP
+      setTimeout(() => {
+        alert("Formulario de contacto enviado con éxito");
 
-      // Redirige a la página de inicio después de la alerta
-      navigate("/");
-    }, 0);
+        // Redirige a la página de inicio después de la alerta
+        navigate("/");
+      }, 0);
+    } else {
+      setErrors(errors);
+    }
   };
 
   return (
-    <div className="text-center flex flex-col items-center justify-center min-h-screen bg-gray-300 text-black">
-      <form className="max-w-md mx-auto p-8 bg-white rounded-lg" onSubmit={handleSubmit}>
-        <h4 className="mb-4">CONTACTA CON CASATE CONMIGO</h4>
+    <div className="contact-form-container">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h4>Si tienes dudas, ¡te echamos una mano!</h4>
         <InputField
           label="Nombre"
           type="text"
@@ -34,6 +64,7 @@ const ContactForm = () => {
           value={name}
           onChange={setName}
         />
+        {errors.name && <p className="error-message">{errors.name}</p>}
         <InputField
           label="Teléfono"
           type="tel"
@@ -41,6 +72,7 @@ const ContactForm = () => {
           value={phone}
           onChange={setPhone}
         />
+        {errors.phone && <p className="error-message">{errors.phone}</p>}
         <InputField
           label="Email"
           type="email"
@@ -48,9 +80,11 @@ const ContactForm = () => {
           value={email}
           onChange={setEmail}
         />
+        {errors.email && <p className="error-message">{errors.email}</p>}
         <TextAreaField label="Nota" id="note" value={note} onChange={setNote} />
-        <button className="border border-green-600 bg-green-600 text-white px-6 py-4 rounded-lg hover:border-green-700 hover:bg-green-700 hover:text-black font-bold transition duration-300" type="submit">Enviar</button>
-        <p className="mt-4 text-gray-600 text-sm">Al contactar declaras haber leído nuestra política de privacidad.</p>
+        {errors.note && <p className="error-message">{errors.note}</p>}
+        <button className="button-contact" type="submit">Enviar</button>
+        <p className="contact-message">Al contactar declaras haber leído nuestra política de privacidad.</p>
       </form>
     </div>
   );
