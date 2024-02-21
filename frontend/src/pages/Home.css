@@ -1,35 +1,4 @@
-/* Estilos para el recuadro con background color B5F0CD */
-.bg-B5F0CD {
-    background-color: #B5F0CD;
-}
-
-/* Estilos para el recuadro de búsqueda con background color 65D492 */
-.bg-65D492 {
-    background-color: #65D492;
-}
-
-/* Estilos para el texto "Búsqueda personalizada" */
-.bg-65D492 h2 {
-    color: white;
-}
-
-/* Estilos para el botón de búsqueda */
-.bg-black {
-    background-color: black;
-    color: white;
-}
-
-/* Estilos para los recuadros */
-.rounded-md {
-    border-radius: 8px;
-}
-
-/* Espaciado entre los elementos */
-.mb-4 {
-    margin-bottom: 1rem;
-}
-
-/* Alinear contenido del centro */
-.text-center {
-    text-align: center;
+.jumbotron{
+    padding: 2rem;
+    background-color: #e6ced6;
 }

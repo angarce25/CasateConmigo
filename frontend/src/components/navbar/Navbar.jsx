@@ -1,28 +1,38 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
-  return (
-    <nav className="bg-gray-800 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            {/* Logo */}
-            <img className="h-8 w-auto" src="/logo.svg" alt="Logo" />
-          </div>
-          <div className="hidden sm:block">
-            {/* Espacio para botones adicionales (si es necesario) */}
-          </div>
-          <div>
-            {/* Botón de sugerencias */}
-            <button className="bg-white text-gray-800 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-200">
-              Sugerencias
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
+function Navbar() {
+    const navbarStyle = {
+        backgroundColor: '#E8F3F3',
+        padding: '5px 0',
+    };
+
+    const logoStyle = {
+        maxWidth: '60px', // Define el ancho máximo del logo
+        maxHeight: 'auto', // Mantén la relación de aspecto
+    };
+
+    return (
+        <nav className="navbar navbar-expand-md border-bottom mb-3" style={navbarStyle}>
+            <div className="container">
+              
+                    <div >   
+                         <NavLink to="/"><img className="logoStyle" src="../../img/logoCasateConmigo1.png" alt="logo anillo" style={logoStyle} /></NavLink>
+                    </div>
+                    <ul className="nav justify-content-center">
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-secondary" to="/" activeClassName="text-dark">Inicio</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-secondary" to="/contact" activeClassName="text-dark">Contacto</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-secondary" to="/favorites" activeClassName="text-dark">Favoritos</NavLink>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    );
+}
 
 export default Navbar;
-
