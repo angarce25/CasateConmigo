@@ -1,0 +1,49 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 215vh;
+    height: 18vh;
+    background-color: #64DE95;
+}
+
+.p-footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-top: 0.2%;
+}
+
+.contact {
+    margin-right: 50px;
+}
+
+.about-us {
+    margin-right: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; 
+    margin-top: 0.5px; 
+}
+
+.logo img {
+    margin: 0 10px; 
+    width: 6vh;
+    height: 6vh;
+}
+
+@media screen and (max-width: 480px) {
+    .p-footer {
+      font-size: 1.5vh; 
+    }
+  
+    .contact,
+    .about-us {
+      margin-right: 10px; 
+    }
+  }

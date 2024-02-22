@@ -39,7 +39,11 @@ const Navbar = () => {
   return (
     <nav style={navbarStyle}>
       <div style={logoContainerStyle}>
+
       <NavLink to="/"><img src="../../img/logoCasateConmigo1.png" alt="Logo" style={logoStyle} /></NavLink>
+
+        <img src="/path/to/your/logo.png" alt="Logo" style={logoStyle} />
+
       </div>
       <div style={favoritesContainerStyle}>
         <button style={favoritesButtonStyle}>Favoritos</button>

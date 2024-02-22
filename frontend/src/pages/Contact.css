@@ -111,7 +111,3 @@ textarea {
     font-weight:bolder; 
   }
   
-  body.dark .contact-form-container {
-    background-color: #333 !important; /* Cambia a tu color deseado */
-    color: #fff !important;
-  }

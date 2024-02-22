@@ -27,12 +27,29 @@ const ContactForm = () => {
       errors.email = "El correo electrónico ingresado no es válido.";
     }
 
+
+  const validateForm = () => {
+    let errors = {};
+
+    if (name.length < 6 || name.length > 16) {
+      errors.name = "El nombre debe tener entre 6 y 16 caracteres.";
+    }
+
+    if (!/^\d{10,11}$/.test(phone)) {
+      errors.phone = "El teléfono debe tener entre 10 y 11 dígitos numéricos.";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errors.email = "El correo electrónico ingresado no es válido.";
+    }
+
     if (note.length < 50 || note.length > 250) {
       errors.note = "La nota debe tener entre 50 y 250 caracteres.";
     }
 
     return errors;
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = validateForm();
