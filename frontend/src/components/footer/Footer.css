@@ -1,11 +1,11 @@
 .footer {
-    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 215vh;
+    height: 18vh;
     background-color: #64DE95;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .p-footer {
@@ -13,37 +13,37 @@
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 3vh;
+    margin-top: 0.2%;
 }
 
-.footer-text {
-    margin: 0 20px; /* Ajustar margen entre los enlaces y el texto */
+.contact {
+    margin-right: 50px;
+}
+
+.about-us {
+    margin-right: 50px;
 }
 
 .logo {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: center; 
+    margin-top: 0.5px; 
 }
 
-.social-logo {
+.logo img {
     margin: 0 10px; 
-    width: 30px;
-    height: 30px;
-}
-
-.footer a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: white; 
+    width: 6vh;
+    height: 6vh;
 }
 
 @media screen and (max-width: 480px) {
     .p-footer {
-        font-size: 12px; 
+      font-size: 1.5vh; 
     }
-
-    .footer-text {
-        margin: 0 10px; /* Reducir margen entre los enlaces y el texto en dispositivos móviles */
+  
+    .contact,
+    .about-us {
+      margin-right: 10px; 
     }
-}
+  }
