@@ -22,22 +22,26 @@ Por último lugar, queremos ser competentes y ofrecer el mejor servicio posible.
 
 Tecnologías utilizadas
 
--FRONTEND: REACT
+-FRONTEND: REACT, HTML, JAVASCRIPT, CSS
 -BACKEND: SPRINGBOOT + MYSQL
+
+
 
 Planificación
 
 Para planificar el proyecto consideramos necesaria la figura del Scrum master así como un espacio de trabajo donde pudieramos plantear las distintos caminos a seguir.
 
 Par ello utilizamos Trello.
+La división de las historias de usuario quedó de la siguiente manera:
 
-La división de las historias de usario quedó de la siguiente manera:
 Historia de Usario 1. BUSCADOR: Como usuario quiero poder acceder a la plataforma CASAte conmigo, el cual ofrece un catálogo de pisos y viviendas en alquiler.
 Puedo acceder a las viviendas disponibles tanto a través de una catálogo principal, como un a través de un buscador por texto.
 
 Historia de Usuario 2. FAVORITOS:Como usuario de la plataforma CASAte conmigo, quiero poder tener una opción que me permita seleccionar los alquileres de viviendas que son de mi interés. Clickando en un corazón, podré guardar ese piso/casa como favorito. Eso favoritos quedan almacenados en la propia página web.
 
 Historia de Usuario3. NOVEDADES:Como usuaria de la plataforma CASAte conmigo, quiero poder ver aquellas alertas sobre los nuevos pisos de alquiler que ofrece la plataforma.
+
+
 
 
 VISTAS DE LA APLICACION:
