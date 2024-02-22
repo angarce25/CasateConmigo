@@ -11,12 +11,12 @@ import ShowProducts from './pages/Search';
 import './pages/Contact.css'
 import './pages/Home.css'
 import './pages/Alert.css'
-import './components/footer/Footer.css'
+import './components/footer/footer.css'
 import './pages/Search.css'
 import './pages/About.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+//hola
 
 
 function App() {
@@ -36,3 +36,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
