@@ -12,13 +12,9 @@ const HomePage = () => {
                     <SearchBar />
                 </div>
 
-                {/* Sección de novedades */}
-                <section className="news-section">
-                    <h5 className="section-title">Novedades</h5>
-                    <Alert className="news-card" />
-                    {/* Agrega más tarjetas de novedades según sea necesario */}
-                </section>
-
+                <div className='Alert'>
+                    <Alert />
+                </div>
                 {/* Sección de explorar opciones */}
                 <section>
                     <h5 className="section-title">Explora nuestras opciones</h5>

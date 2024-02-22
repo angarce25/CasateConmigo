@@ -27,7 +27,7 @@ const Alert = () => {
 
  return (
    <div className="cards-container">
-     {/* <p className='text'>Novedades</p> */}
+     <h5 className='text'>Novedades</h5>
      {/* Tarjeta 1 */}
      <div className="card">
        <div className="card-image">
