@@ -61,7 +61,7 @@ const Navbar = () => {
 			<div style={buttonContainerStyle}>
 				<button style={buttonStyle1}>
 					<NavLink
-						to="/publicar-anuncio"
+						to="/PublicarAnuncio"
 						style={{ color: "white", textDecoration: "none" }}
 					>
 						Publicar Anuncio
