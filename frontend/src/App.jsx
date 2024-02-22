@@ -1,39 +1,33 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import HomePage from "./pages/Home";
+import ContactForm from "../src/pages/Contact";
+import Aboutus from "./pages/About";
 
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import HomePage from './pages/Home';
-import ContactForm from '../src/pages/Contact';
-import Aboutus from './pages/About';
-
-import ShowProducts from './pages/Search';
-
-import './pages/Contact.css'
-import './pages/Home.css'
-import './pages/Alert.css'
-import './components/footer/footer.css'
-import './pages/Search.css'
-import './pages/About.css'
-
-
-
+import ShowProducts from "./pages/Search";
+import "./components/panel/card/card.css";
+import "./pages/Contact.css";
+import "./pages/Home.css";
+import "./pages/Alert.css";
+import "./components/footer/footer.css";
+import "./pages/Search.css";
+import "./pages/About.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar />
-    
-      <Routes>
+	return (
+		<div className="App">
+			<Navbar />
 
-       <Route path='/Contact' element={<ContactForm />} />
-       <Route path='/Search' element={<ShowProducts />} />
-       <Route path="/" element={<HomePage />} />
-       <Route path="/about" element={<Aboutus />} />
-       
-      </Routes>
-      <Footer />
-    </div>
-  );
+			<Routes>
+				<Route path="/Contact" element={<ContactForm />} />
+				<Route path="/Search" element={<ShowProducts />} />
+				<Route path="/" element={<HomePage />} />
+				<Route path="/about" element={<Aboutus />} />
+			</Routes>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

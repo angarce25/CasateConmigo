@@ -1,103 +1,87 @@
 .text {
-    font-weight: 900;
-    position: absolute;
-    color: #ebebeb;
-    font-size: 25px;
-   }
-   
-   
-   .cards-container {
-    width: 100%;
-    max-width: 1708px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    background-color: #65D492;
-    border-radius: 10px;
-   }
-   
-   
-   .card {
-    position: relative;
-    width: 308px;
-    height: 244px;
-    background: #ebebeb;
-    border-radius: 7px;
-    margin-top: 50px;
-   }
-   
-   
-   .card-image {
-    background-color: rgb(236, 236, 236);
-    width: 100%;
-    height: 182px;
-    border-radius: 6px 6px 0 0;
-    overflow: hidden;
-   }
-   
-   
-   .card-image img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-   }
-   
-   
-   .card-image:hover {
-    transform: scale(0.98);
-   }
-   
-   
-   .card-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 5px;
-   }
-   
-   
-   /* Estilo para el encabezado */
-   .heading {
-    font-weight: 900;
-    color: rgb(88, 87, 87);
-    margin-top: 20px;
-    padding: 10px; /* Añadir espacio alrededor del texto */
-    font-size: 18px;
-   }
-   
-   
-   /* Estilo para el icono del corazón */
-   .heart-icon {
-    position: absolute;
-    bottom: 15px;
-    right: 30px; /* Mover al lado derecho */
-    cursor: pointer;
-    font-size: 24px;
-    color: red; /* Cambiado el color a rojo por defecto */
-   }
-   
-   
-   /* Estilo para el icono del corazón cuando está 'liked' */
-   .heart-icon.liked {
-    color: gray; /* Cambiado el color a gris cuando está marcado como "gustado" */
-   }
-   
-   
-   .author {
-    color: gray;
-    font-weight: 400;
-    font-size: 11px;
-   }
-   
-   
-   .name {
-    font-weight: 600;
-   }
-   
-   
-   .name:hover {
-    cursor: pointer;
-   }
-   
+	font-weight: 900;
+	position: absolute;
+	color: #ebebeb;
+	font-size: 25px;
+}
+
+.cards-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px;
+	background-color: #65d492;
+	border-radius: 10px;
+}
+
+.card {
+	position: relative;
+	width: 308px;
+	height: 244px;
+	background: #ebebeb;
+	border-radius: 7px;
+	margin-top: 50px;
+}
+
+.card-image {
+	background-color: rgb(236, 236, 236);
+	width: 100%;
+	height: 182px;
+	border-radius: 6px 6px 0 0;
+	overflow: hidden;
+}
+
+.card-image img {
+	width: 100%;
+	height: 70%;
+	object-fit: cover;
+}
+
+.card-image:hover {
+	transform: scale(0.98);
+}
+
+.card-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+}
+
+/* Estilo para el encabezado */
+.heading {
+	font-weight: 900;
+	color: rgb(88, 87, 87);
+	margin-top: 20px;
+	padding: 10px; /* Añadir espacio alrededor del texto */
+	font-size: 18px;
+}
+
+/* Estilo para el icono del corazón */
+.heart-icon {
+	bottom: 15px;
+	right: 30px; /* Mover al lado derecho */
+	cursor: pointer;
+	font-size: 24px;
+	color: red; /* Cambiado el color a rojo por defecto */
+}
+
+/* Estilo para el icono del corazón cuando está 'liked' */
+.heart-icon.liked {
+	color: gray; /* Cambiado el color a gris cuando está marcado como "gustado" */
+}
+
+.author {
+	color: gray;
+	font-weight: 400;
+	font-size: 11px;
+}
+
+.name {
+	font-weight: 600;
+}
+
+.name:hover {
+	cursor: pointer;
+}

@@ -16,8 +16,8 @@ const Panel = () => {
 			});
 	}, []);
 	return (
-		<main>
-			<h2>Explora todas nuestras opciones</h2>
+		<main className="panelMain">
+			<h2 className="panelHeader">Explora todas nuestras opciones</h2>
 			<section className="cardContainer">
 				{posts.map((post) => {
 					return (
