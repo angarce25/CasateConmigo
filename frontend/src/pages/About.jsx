@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 
 const Aboutus = () => {
@@ -34,4 +34,4 @@ const Aboutus = () => {
     );
 };
 
-export default Aboutus;
+export default Aboutus;
