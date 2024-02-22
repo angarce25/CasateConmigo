@@ -1,71 +1,57 @@
 import React, { useState } from 'react';
-import data from '../../data/data.json'; // Importa los datos del archivo JSON
+import { useNavigate } from 'react-router-dom';
 
-// Función para eliminar acentos de un texto
-const removeAccents = (str) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-};
+function SearchBar() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [priceRange, setPriceRange] = useState('');
+    const navigate = useNavigate();
 
-const SearchBar = ({ searchTerm, setSearchTerm }) => {
+    const handleSearch = () => {
+        let searchQuery = `/search?q=${encodeURIComponent(searchTerm)}`;
+
+        // Agregar filtro por rango de precio
+        if (priceRange === 'lt700') {
+            searchQuery += '&minPrice=0&maxPrice=700';
+        } else if (priceRange === '701-1000') {
+            searchQuery += '&minPrice=701&maxPrice=1000';
+        } else if (priceRange === 'gt1000') {
+            searchQuery += '&minPrice=1001';
+        }
+
+        navigate(searchQuery);
+    };
+
     return (
-        <div className="flex justify-end mt-4">
-            <input
-                type="text"
-                placeholder="Buscar..."
-                className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-        </div>
-    );
-};
-
-const Card = ({ piso }) => {
-    return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-full" src={piso.foto} alt={piso.nombre} />
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{piso.nombre}</div>
-                <p className="text-gray-700 text-base">{piso.descripcion}</p>
-                <p className="text-gray-700 text-base">Importe: {piso.importe}€</p>
-                <p className="text-gray-700 text-base">Localización: {piso.localizacion}</p>
-                <p className="text-gray-700 text-base">Fecha del anuncio: {piso.fecha_anuncio}</p>
+        <div style={{ backgroundColor: '#B5F0CD', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
+            <div style={{ backgroundColor: '#65D492', padding: '20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <h5 style={{ color: 'white', marginRight: '10px' }}>Búsqueda personalizada</h5>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '70%' }}>
+                    <input
+                        type="text"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        style={{ backgroundColor: 'white', padding: '8px', borderRadius: '8px', marginRight: '10px', flex: '1' }}
+                    />
+                    <select
+                        value={priceRange}
+                        onChange={(e) => setPriceRange(e.target.value)}
+                        style={{ backgroundColor: 'white', padding: '8px', borderRadius: '8px', marginRight: '10px' }}
+                    >
+                        <option value="">Rango de precio</option>
+                        <option value="lt700">Menor de 700€</option>
+                        <option value="701-1000">701€ - 1000€</option>
+                        <option value="gt1000">Mayor de 1000€</option>
+                    </select>
+                    <button
+                        onClick={handleSearch}
+                        style={{ backgroundColor: 'white', color: 'black', padding: '8px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}
+                    >
+                        Buscar
+                    </button>
+                </div>
             </div>
         </div>
     );
-};
+}
 
-const SearchableApartments = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-
-    return (
-        <div className="container mx-auto">
-            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            {searchTerm && <SearchableCardList searchTerm={searchTerm} />}
-        </div>
-    );
-};
-
-const SearchableCardList = ({ searchTerm }) => {
-    const filteredData = data.filter(piso => {
-        const lowerSearchTerm = removeAccents(searchTerm.toLowerCase());
-        for (let key in piso) {
-            if (typeof piso[key] === 'string' && removeAccents(piso[key].toLowerCase()).includes(lowerSearchTerm)) {
-                return true;
-            } else if (typeof piso[key] === 'number' && piso[key] === Number(searchTerm)) {
-                return true;
-            }
-        }
-        return false;
-    });
-
-    return (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {filteredData.map(piso => (
-                <Card key={piso.id} piso={piso} />
-            ))}
-        </div>
-    );
-};
-
-export default SearchableApartments;
+export default SearchBar;

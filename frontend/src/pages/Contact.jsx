@@ -12,6 +12,21 @@ const ContactForm = () => {
   const [note, setNote] = useState("");
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  const validateForm = () => {
+    let errors = {};
+
+    if (name.length < 6 || name.length > 16) {
+      errors.name = "El nombre debe tener entre 6 y 16 caracteres.";
+    }
+
+    if (!/^\d{10,11}$/.test(phone)) {
+      errors.phone = "El teléfono debe tener entre 10 y 11 dígitos numéricos.";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errors.email = "El correo electrónico ingresado no es válido.";
+    }
+
 
   const validateForm = () => {
     let errors = {};
@@ -52,7 +67,6 @@ const ContactForm = () => {
       setErrors(errors);
     }
   };
-
   return (
     <div className="contact-form-container">
       <form className="contact-form" onSubmit={handleSubmit}>

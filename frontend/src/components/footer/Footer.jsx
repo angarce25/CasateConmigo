@@ -1,26 +1,26 @@
 import React from 'react';
-import '../footer/footer.css';
 
-import twitter from "../../../public/image/Twitter.png";
-import instagram from "../../../public/image/Instagram.png";
-import mail from "../../../public/image/mail.png";
+import { NavLink } from 'react-router-dom';
 
+import twitter from "../../../public/img/Twitter.png";
+import instagram from "../../../public/img/Instagram.png";
+import mail from "../../../public/img/mail.png";
 
-const Footer = () => {
+function Footer() {
     return (
         <footer className='footer'>
             <div className='p-footer'>
-                <p className='contact'>Contacto</p>
-                <p className='about-us'>Sobre Nosotros</p>
-                <p>Copyrigth</p>
+                <NavLink to="/contact" className='footer-link'>Contacto</NavLink>
+                <NavLink to="/about" className='footer-link'>Sobre Nosotros</NavLink>
+                <p className='footer-text'>Copyrigth</p>
             </div>
             <div className='logo'>
-                <img src={twitter} alt="Logo de twitter" />
-                <img src={instagram} alt="Logo de instagram" />
-                <img src={mail} alt="Icono de email" />
+                <img src={twitter} alt="Logo de twitter" className='social-logo' />
+                <NavLink to="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F" className='social-link'><img src={instagram} alt="Logo de instagram" className='social-logo' /></NavLink>
+                <img src={mail} alt="Icono de email" className='social-logo' />
             </div>
         </footer>
     );
-  }
+}
   
-  export default Footer;
+export default Footer;
