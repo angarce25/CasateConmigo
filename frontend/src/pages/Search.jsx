@@ -51,10 +51,7 @@ const ShowProducts = () => {
                             <img src={product.foto} className="card-img-top" alt={product.nombre} style={{ maxHeight: '200px' }} />
                             <div className="card-body">
                                 <h5 className="card-title">{product.nombre}</h5>
-                                <p className="card-text">{product.descripcion}</p>
-                                <p className="card-text">Precio: {product.importe}€</p>
-                                <p className="card-text">Localización: {product.localizacion}</p>
-                                <p className="card-text">Fecha del anuncio: {product.fecha_anuncio}</p>
+                                {/* Agregar aquí más contenido según sea necesario */}
                             </div>
                         </div>
                     </div>

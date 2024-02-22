@@ -1,38 +1,51 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
-    const navbarStyle = {
-        backgroundColor: '#E8F3F3',
-        padding: '5px 0',
-    };
+const Navbar = () => {
+  const navbarStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    border: '2px solid green',
+    padding: '10px 20px', // Ajusta el padding según tu preferencia
+  };
 
-    const logoStyle = {
-        maxWidth: '60px', // Define el ancho máximo del logo
-        maxHeight: 'auto', // Mantén la relación de aspecto
-    };
+  const logoContainerStyle = {
+    // Puedes ajustar el tamaño y margen del logo según sea necesario
+  };
 
-    return (
-        <nav className="navbar navbar-expand-md border-bottom mb-3" style={navbarStyle}>
-            <div className="container">
-              
-                    <div >   
-                         <NavLink to="/"><img className="logoStyle" src="../../img/logoCasateConmigo1.png" alt="logo anillo" style={logoStyle} /></NavLink>
-                    </div>
-                    <ul className="nav justify-content-center">
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-secondary" to="/" activeClassName="text-dark">Inicio</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-secondary" to="/contact" activeClassName="text-dark">Contacto</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-secondary" to="/favorites" activeClassName="text-dark">Favoritos</NavLink>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    );
+  const logoStyle = {
+    maxWidth: '100px', // Ajusta el tamaño máximo del logo
+  };
+
+  const favoritesContainerStyle = {
+    // Puedes ajustar el espacio y margen del botón de favoritos según sea necesario
+  };
+
+  const favoritesButtonStyle = {
+    backgroundColor: 'green',
+    color: 'white',
+    border: 'none',
+    padding: '10px 20px', // Ajusta el padding según tu preferencia
+    cursor: 'pointer',
+    borderRadius: '5px',
+  };
+
+  const favoritesButtonHoverStyle = {
+    backgroundColor: 'darkgreen', // Cambia el color al pasar el cursor sobre el botón
+  };
+
+  return (
+    <nav style={navbarStyle}>
+      <div style={logoContainerStyle}>
+      <NavLink to="/"><img src="../../img/logoCasateConmigo1.png" alt="Logo" style={logoStyle} /></NavLink>
+      </div>
+      <div style={favoritesContainerStyle}>
+        <button style={favoritesButtonStyle}>Favoritos</button>
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;
