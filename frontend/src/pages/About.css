@@ -1,0 +1,47 @@
+/* Estilos generales */
+.aboutus-container {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (min-width: 768px) {
+    /* Ajustes para tablets y pantallas más grandes */
+    .aboutus-container {
+        padding: 40px;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .section p {
+        font-size: 18px;
+    }
+}

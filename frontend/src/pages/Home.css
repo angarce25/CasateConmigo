@@ -1,0 +1,52 @@
+/* Estilo para la sección de búsqueda */
+.search-section {
+	background-color: #b5f0cd;
+	border-radius: 8px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding: 5%;
+}
+
+/* Estilo para el título de la sección */
+.section-title {
+	color: white;
+	margin-bottom: 10px;
+}
+
+/* Estilo para la sección de novedades */
+.news-section {
+	background-color: #65d492;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	display: flex; /* Utilizar flexbox */
+	flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en varias líneas */
+	justify-content: space-between; /* Distribuir el espacio entre las tarjetas */
+}
+
+/* Estilo para las tarjetas dentro de la sección de novedades */
+.news-card {
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	width: calc(
+		33.33% - 20px
+	); /* Ajustar el ancho de las tarjetas para que quepan tres en una fila */
+	box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+.main-content {
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #b5f0cd;
+}
+
+.mainContainer {
+	border-radius: 1rem;
+	background-color: white;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}

@@ -1,0 +1,25 @@
+.cardMain {
+	width: auto;
+	height: auto;
+}
+
+.cardFooter {
+	height: 30%;
+	background-color: rgb(0, 255, 255);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	background-color: rgb(224, 224, 224);
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.cardImage {
+	height: 70%;
+	background-color: aquamarine;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}

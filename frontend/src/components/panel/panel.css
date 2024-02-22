@@ -1,0 +1,10 @@
+.cardContainer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 30vh);
+	gap: 1rem;
+}
+
+.panelHeader {
+	margin-bottom: 3rem;
+}
