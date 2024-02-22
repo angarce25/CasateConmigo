@@ -38,3 +38,15 @@
 .name {
     font-weight: 600;
 }
+.btnSearch{
+    border: #abc07f solid 0.15em;
+    background-color: #fff;
+    transition: border 300ms, color 300ms, transform 0.3s;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+    overflow: hidden; 
+    
+}

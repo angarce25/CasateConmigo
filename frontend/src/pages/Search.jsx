@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import data from '../data/data.json';
 
@@ -40,31 +40,33 @@ const ShowProducts = () => {
 
     return (
         <div className="container">
-            <h5 className="my-4">Resultados de la búsqueda</h5>
-            <div className="cards-container">
-                {currentProducts.map(product => (
-                    <div key={product.id} className="card">
-                        <div className="card-image">
-                            <img src={product.foto} alt={product.nombre} />
+            <div className="content-wrapper">
+                <h4 className="my-4">Resultados de la búsqueda</h4>
+                <div className="cards-container" style={{ marginBottom: '20px' }}>
+                    {currentProducts.map(product => (
+                        <div key={product.id} className="card" style={{ marginBottom: '20px' }}>
+                            <div className="card-image" style={{ maxHeight: '150px' }}>
+                                <img src={product.foto} alt={product.nombre} style={{ maxHeight: '100%', maxWidth: '100%' }} />
+                            </div>
+                            <div className="card-content">
+                                <h5 className="heading" style={{ fontSize: '16px', marginTop: '10px' }}>{product.nombre}</h5>
+                                <p className="card-text">Precio: {product.importe}€</p>
+                                {/* Agregar más contenido según sea necesario */}
+                            </div>
                         </div>
-                        <div className="card-content">
-                            <h5 className="heading">{product.nombre}</h5>
-                            {/* Agregar más contenido según sea necesario */}
-                            <p className="author">Autor: <span className="name">{product.autor}</span></p>
-                        </div>
+                    ))}
+                </div>
+                <div className="pagination" style={{ color: '#abc07f', textAlign: 'center', marginBottom: '20px' }}>
+                    {[...Array(Math.ceil(searchResults.length / productsPerPage)).keys()].map(number => (
+                        <button key={number + 1} className={currentPage === number + 1 ? 'active btnPagination' : 'btnPagination'} onClick={() => paginate(number + 1)}>
+                            {number + 1}
+                        </button>
+                    ))}
+                </div>
+                <div className="row">
+                    <div className="col-12 mt-3" style={{ display: 'flex', justifyContent: 'center' }}>
+                        <button className="btnSearch" onClick={loadAllProducts} style={{ color: '#000', marginRight: '10px', marginBottom: '10px' }}>Mostrar todos los productos</button>
                     </div>
-                ))}
-            </div>
-            <div className="pagination">
-                {[...Array(Math.ceil(searchResults.length / productsPerPage)).keys()].map(number => (
-                    <button key={number + 1} className={currentPage === number + 1 ? 'active' : ''} onClick={() => paginate(number + 1)}>
-                        {number + 1}
-                    </button>
-                ))}
-            </div>
-            <div className="row">
-                <div className="col d-flex justify-content-center mt-3">
-                    <button className="btn" onClick={loadAllProducts}>Mostrar todos los productos</button>
                 </div>
             </div>
         </div>
@@ -72,3 +74,4 @@ const ShowProducts = () => {
 };
 
 export default ShowProducts;
+
