@@ -12,7 +12,7 @@ function Footer() {
             <div className='p-footer'>
                 <NavLink to="/contact" className='footer-link footer-text'>Contacto</NavLink>
                 <NavLink to="/about" className='footer-link footer-text'>Sobre Nosotros</NavLink>
-                <p className='footer-text'>Copyrigth</p>
+                <p className='footer-text'>&copy; 2024 CASAte conmigo</p>
             </div>
             <div className='logo'>
                 <NavLink to="https://twitter.com/" className='social-link'><img src={twitter} alt="Logo de twitter" className='social-logo' /></NavLink>
