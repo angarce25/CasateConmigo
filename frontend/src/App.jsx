@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import HomePage from './pages/Home';
 import ContactForm from '../src/pages/Contact';
 import Aboutus from './pages/About';
+import Login from './pages/Login';
 
 import ShowProducts from './pages/Search';
 
@@ -15,8 +16,6 @@ import './components/footer/footer.css'
 import './pages/Search.css'
 import './pages/About.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-//hola
 
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
        <Route path='/Search' element={<ShowProducts />} />
        <Route path="/" element={<HomePage />} />
        <Route path="/about" element={<Aboutus />} />
-       <Route path="/acceder" element={<Login/>} />
+       <Route path="/acceder" element={<Login />} />
        
       </Routes>
       <Footer />
